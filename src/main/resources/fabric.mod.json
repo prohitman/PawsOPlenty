@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "pawsoplenty",
+	"version": "${version}",
+	"name": "Paws O' Plenty",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pawsoplenty/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.prohtiman.pawsoplenty.PawsOPlenty"
+		],
+		"client": [
+			"com.prohtiman.pawsoplenty.PawsOPlentyClient"
+		],
+		"fabric-datagen": [
+			"com.prohtiman.pawsoplenty.PawsOPlentyDataGenerator"
+		]
+	},
+	"mixins": [
+		"pawsoplenty.mixins.json",
+		{
+			"config": "pawsoplenty.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
